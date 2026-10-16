@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ada Pesan Spesial! 😜</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Library Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- STEP 1: Pertanyaan Ngeselin -->
+  <div class="card" id="quizCard">
+    <div class="emoji-icon">🤔</div>
+    <h2>Pertanyaan Penting!</h2>
+    <p class="question">Apakah kamu mengakui kalau orang yang buat website ini adalah orang paling ganteng/baik se-dunia?</p>
+    
+    <div class="btn-group">
+      <button id="btnYes" onclick="handleYes()">Iya, banget! 😍</button>
+      <button id="btnNo" onmouseover="moveNoButton()" onclick="moveNoButton()" ontouchstart="moveNoButton()">Enggak 😜</button>
+    </div>
+  </div>
+
+  <!-- STEP 2: Pop-up / Dialog Jahil bertingkat -->
+  <div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal-card">
+      <h3 id="modalText">Yakin nih? Beneran? 😏</h3>
+      <button id="modalBtn" onclick="nextPrankStep()">Lanjut ➡️</button>
+    </div>
+  </div>
+
+  <!-- STEP 3: Ucapan Utama & Foto (Muncul setelah lolos jebakan) -->
+  <div class="card hidden" id="resultCard">
+    <div class="emoji-icon">🎉🎂✨</div>
+    <h1>Happy Birthday Sayang! ❤️</h1>
+    <p class="subtitle">Nah gitu dong diakui... wkwk!</p>
+    
+    <div class="letter">
+      <p>
+        Selamat ulang tahun ya sayang ❤! Semoga di usiamu yang baru ini selalu dilimpahkan kebahagiaan, kesehatan, dan kemudahan dalam segala hal.
+      </p>
+      <p>
+        Terima kasih udah selalu meluangkan waktunya buat aku dan jadi orang yang menyenangkan (meskipun kadang ngeselin juga 😜). Enjoy your special day!
+      </p>
+    </div>
+
+    <div class="photo-container">
+      <!-- Ganti src dengan link atau nama file fotomu -->
+      <img src="https://via.placeholder.com/350x230" alt="Foto Kenangan" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

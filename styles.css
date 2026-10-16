@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 380px;
+  width: 90%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.emoji-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #d63384;
+  margin-top: 0;
+}
+
+h2 {
+  color: #333;
+  font-size: 20px;
+}
+
+.question {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  min-height: 50px;
+  position: relative;
+}
+
+button {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Posisi khusus tombol 'Enggak' agar bisa kabur */
+#btnNo {
+  background-color: #a4b0be;
+  position: relative;
+  transition: top 0.15s ease, left 0.15s ease;
+}
+
+/* Modal Pop-up */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 300px;
+  width: 80%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.modal-card h3 {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.letter {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+  background: #fff5f7;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.photo-container img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
